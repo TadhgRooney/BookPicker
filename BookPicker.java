@@ -10,7 +10,24 @@ public class BookPicker{
 
 
 public BookPicker(){
-  randomBook();
+
+  menu();
+  
+}
+
+public void menu(){
+
+  String reply;
+  Scanner scan = new Scanner(System.in);
+
+  System.out.println("Do you want to accsess a random book or add a book to the queue?");    
+  reply = scan.nextLine();
+
+  if(reply.equalsIgnoreCase("Random")){
+    randomBook();
+  }
+
+  
 }
 
 public void randomBook(){
